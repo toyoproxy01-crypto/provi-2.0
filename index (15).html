@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Provinet Empresa Emprendimiento | Cómo Arrancar un Negocio desde Cero</title>
+<meta name="description" content="Guías educativas sobre cómo arrancar un negocio desde cero en Venezuela. Aprende sobre ideas, finanzas, clientes, precios y crecimiento para emprendedores.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --azul:       #2563EB;
+  --azul-dark:  #1D4ED8;
+  --azul-light: #EFF6FF;
+  --azul-pale:  #F8FBFF;
+  --lima:       #65A30D;
+  --lima-soft:  #F7FEE7;
+  --white:      #FFFFFF;
+  --sand:       #F9FAFB;
+  --line:       #E5E7EB;
+  --muted:      #6B7280;
+  --text:       #111827;
+  --f:          'DM Sans', system-ui, sans-serif;
+  --fs:         'DM Serif Display', Georgia, serif;
+  --r:          10px;
+  --sh:         0 2px 16px rgba(37,99,235,0.08);
+  --sh-md:      0 8px 32px rgba(37,99,235,0.13);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--white);color:var(--text);font-size:16px;line-height:1.65}
+
+/* NAV */
+nav{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(37,99,235,0.05)}
+.nav-in{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:62px;padding:0 24px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:36px;height:36px;background:var(--azul);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:1.1rem;flex-shrink:0}
+.logo-txt{font-weight:800;font-size:0.9rem;color:var(--text);line-height:1.2}
+.logo-txt small{display:block;font-size:0.58rem;font-weight:500;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase}
+.nav-links{display:flex;gap:2px;list-style:none}
+.nav-links a{font-size:0.77rem;font-weight:600;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:6px;transition:all 0.15s}
+.nav-links a:hover{color:var(--azul);background:var(--azul-light)}
+.nav-s{display:flex;align-items:center;gap:8px;background:var(--sand);border:1px solid var(--line);border-radius:8px;padding:6px 12px}
+.nav-s input{background:none;border:none;outline:none;font-family:var(--f);font-size:0.77rem;color:var(--text);width:130px}
+.nav-s input::placeholder{color:var(--muted)}
+.burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px}
+.burger span{display:block;width:20px;height:2px;background:var(--text);border-radius:2px}
+
+/* AVISO */
+.aviso{background:var(--azul-light);border-top:2px solid var(--azul);border-bottom:2px solid var(--azul);padding:13px 24px;text-align:center;font-size:0.8rem;color:var(--azul-dark);font-weight:600;line-height:1.7}
+
+/* HERO */
+.hero{background:var(--azul-pale);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero-circle{position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,0.06) 0%,transparent 65%);pointer-events:none}
+.hero-in{max-width:1140px;margin:0 auto;padding:64px 24px 56px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:center;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--azul);color:var(--white);font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:20px}
+.hero h1{font-family:var(--fs);font-size:clamp(2rem,4vw,3.1rem);line-height:1.12;color:var(--text);margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--azul)}
+.hero-sub{font-size:0.98rem;color:var(--muted);line-height:1.78;margin-bottom:28px;max-width:460px}
+.hero-cta{display:inline-flex;align-items:center;gap:8px;background:var(--azul);color:var(--white);font-family:var(--f);font-weight:800;font-size:0.88rem;padding:13px 26px;border-radius:8px;text-decoration:none;transition:all 0.2s}
+.hero-cta:hover{background:var(--azul-dark);transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,99,235,0.3)}
+.hero-right{display:flex;flex-direction:column;gap:10px}
+.step-box{background:var(--white);border:1.5px solid var(--line);border-radius:var(--r);padding:14px 16px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:all 0.2s}
+.step-box:hover{border-color:var(--azul);box-shadow:var(--sh)}
+.step-n{width:32px;height:32px;border-radius:50%;background:var(--azul-light);color:var(--azul);font-weight:800;font-size:0.82rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step-txt strong{display:block;font-size:0.84rem;font-weight:700;color:var(--text);margin-bottom:2px}
+.step-txt span{font-size:0.72rem;color:var(--muted)}
+
+/* STATS */
+.stats{background:var(--azul);padding:18px 24px}
+.stats-in{max-width:1140px;margin:0 auto;display:flex;gap:48px;justify-content:center;flex-wrap:wrap}
+.stat{text-align:center;color:var(--white)}
+.stat .n{font-family:var(--fs);font-size:1.8rem;line-height:1}
+.stat .l{font-size:0.67rem;color:rgba(255,255,255,0.65);margin-top:3px;text-transform:uppercase;letter-spacing:0.08em}
+
+/* CATS */
+.cats{padding:52px 24px;background:var(--sand)}
+.cats-in{max-width:1140px;margin:0 auto}
+.s-eye{font-size:0.68rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--lima);margin-bottom:6px}
+.s-ttl{font-family:var(--fs);font-size:1.6rem;color:var(--text);margin-bottom:28px}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px}
+.cat-card{background:var(--white);border:1.5px solid var(--line);border-radius:var(--r);padding:20px 14px;cursor:pointer;transition:all 0.2s;text-align:center}
+.cat-card:hover{border-color:var(--azul);box-shadow:var(--sh);transform:translateY(-2px)}
+.cat-card .ic{font-size:1.8rem;margin-bottom:8px;display:block}
+.cat-card h3{font-size:0.82rem;font-weight:800;color:var(--azul);margin-bottom:3px}
+.cat-card p{font-size:0.7rem;color:var(--muted)}
+
+/* ARTS */
+.arts{padding:52px 24px;background:var(--white)}
+.arts-in{max-width:1140px;margin:0 auto}
+.frow{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:26px}
+.fb{font-size:0.74rem;font-weight:700;padding:5px 14px;border-radius:20px;border:1.5px solid var(--line);background:var(--sand);color:var(--muted);cursor:pointer;transition:all 0.15s;font-family:var(--f)}
+.fb.on,.fb:hover{background:var(--azul);color:var(--white);border-color:var(--azul)}
+.art-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(315px,1fr));gap:20px}
+.art-card{background:var(--white);border:1.5px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:all 0.2s}
+.art-card:hover{box-shadow:var(--sh-md);transform:translateY(-3px);border-color:var(--azul-light)}
+.art-thumb{height:110px;display:flex;align-items:center;justify-content:center;font-size:2.6rem}
+.art-body{padding:18px}
+.art-tag{font-size:0.63rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:3px 9px;border-radius:10px;margin-bottom:9px;display:inline-block}
+.art-card h3{font-size:0.94rem;font-weight:700;color:var(--text);margin-bottom:7px;line-height:1.35}
+.art-card p{font-size:0.79rem;color:var(--muted);line-height:1.6}
+.art-read{font-size:0.73rem;font-weight:800;color:var(--azul);margin-top:11px;display:inline-flex;align-items:center;gap:4px}
+
+.tg-a{background:#EFF6FF;color:#1D4ED8}
+.tg-b{background:#F7FEE7;color:#3F6212}
+.tg-c{background:#FEF9C3;color:#854D0E}
+.tg-d{background:#FDF4FF;color:#6B21A8}
+.tg-e{background:#FFF1F2;color:#BE123C}
+.tg-f{background:#F0FDF4;color:#166534}
+
+/* READER */
+#reader{display:none;position:fixed;inset:0;z-index:200;background:var(--white);overflow-y:auto}
+.rdr-nav{background:var(--azul);padding:14px 24px;display:flex;align-items:center;gap:16px;position:sticky;top:0;z-index:201}
+.back{background:none;border:none;cursor:pointer;font-family:var(--f);font-size:0.85rem;font-weight:800;color:var(--white);display:flex;align-items:center;gap:6px}
+.back:hover{color:var(--azul-light)}
+.rdr-wrap{max-width:700px;margin:0 auto;padding:52px 24px 100px}
+.rdr-tag{font-size:0.68rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:10px;margin-bottom:16px;display:inline-block}
+.rdr-wrap h1{font-family:var(--fs);font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.15;color:var(--text);margin-bottom:14px}
+.r-meta{font-size:0.76rem;color:var(--muted);padding-bottom:18px;margin-bottom:28px;border-bottom:3px solid var(--azul-light)}
+.rb h2{font-family:var(--fs);font-size:1.25rem;color:var(--azul);margin:34px 0 11px;padding-bottom:6px;border-bottom:2px solid var(--azul-light)}
+.rb h3{font-size:1rem;font-weight:700;color:var(--text);margin:20px 0 7px}
+.rb p{color:var(--muted);margin-bottom:15px;line-height:1.82;font-size:0.97rem}
+.rb ul,.rb ol{padding-left:22px;margin-bottom:15px}
+.rb li{color:var(--muted);margin-bottom:7px;line-height:1.7;font-size:0.97rem}
+.rb strong{color:var(--text)}
+.tip{background:var(--azul-pale);border-left:4px solid var(--azul);padding:14px 18px;border-radius:0 8px 8px 0;margin:22px 0}
+.tip p{margin:0;color:var(--azul-dark);font-size:0.91rem}
+.warn{background:#FFFBEB;border-left:4px solid #F59E0B;padding:14px 18px;border-radius:0 8px 8px 0;margin:22px 0}
+.warn p{margin:0;color:#78350F;font-size:0.91rem}
+.adslot{border:1px dashed var(--line);border-radius:8px;padding:12px;text-align:center;color:var(--muted);font-size:0.68rem;margin:26px 0}
+.rel-blk{margin-top:48px;padding-top:26px;border-top:1px solid var(--line)}
+.rel-blk h4{font-size:0.72rem;font-weight:800;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:12px}
+.rel-links{display:flex;flex-wrap:wrap;gap:8px}
+.rel-lnk{background:var(--azul-pale);border:1px solid var(--azul-light);border-radius:8px;padding:7px 13px;font-size:0.8rem;color:var(--azul);text-decoration:none;font-weight:700}
+.rel-lnk:hover{background:var(--azul-light)}
+
+/* MODALS */
+.mbg{display:none;position:fixed;inset:0;z-index:500;background:rgba(17,24,39,0.55);align-items:center;justify-content:center}
+.mbg.open{display:flex}
+.mbox{background:var(--white);border-radius:14px;max-width:580px;width:92%;max-height:82vh;overflow-y:auto;padding:34px;box-shadow:var(--sh-md)}
+.mhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.mclose{background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--muted)}
+.mbox h2{font-family:var(--fs);font-size:1.3rem;color:var(--azul)}
+.mbox p,.mbox li{font-size:0.86rem;color:var(--muted);line-height:1.75;margin-bottom:9px}
+.mbox ul{padding-left:18px}
+.mbox a{color:var(--azul)}
+
+/* COOKIE */
+#ck{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--text);color:rgba(255,255,255,0.8);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:3px solid var(--azul)}
+#ck p{font-size:0.8rem;max-width:640px}
+#ck a{color:#93C5FD}
+.ck-btns{display:flex;gap:8px;flex-shrink:0}
+.ck-ok{background:var(--azul);color:var(--white);border:none;font-family:var(--f);font-weight:700;font-size:0.8rem;padding:8px 18px;border-radius:7px;cursor:pointer}
+.ck-no{background:none;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.2);font-family:var(--f);font-size:0.8rem;padding:8px 18px;border-radius:7px;cursor:pointer}
+
+/* FOOTER */
+footer{background:#1E3A5F;color:rgba(255,255,255,0.55);padding:48px 24px 24px}
+.foot-in{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:44px;margin-bottom:32px}
+.foot-brand{font-family:var(--fs);font-size:1rem;color:var(--white);margin-bottom:10px;display:block}
+.foot-desc{font-size:0.8rem;line-height:1.65}
+.foot-col h5{color:rgba(255,255,255,0.85);font-size:0.76rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:12px}
+.foot-col ul{list-style:none}
+.foot-col li{margin-bottom:8px}
+.foot-col a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.79rem;transition:color 0.15s}
+.foot-col a:hover{color:#93C5FD}
+.foot-bot{max-width:1140px;margin:0 auto;border-top:1px solid rgba(255,255,255,0.08);padding-top:18px;font-size:0.74rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+@media(max-width:900px){
+  .hero-in{grid-template-columns:1fr;gap:32px}
+  .hero-right{display:none}
+  .foot-in{grid-template-columns:1fr 1fr}
+  .foot-in>div:first-child{grid-column:span 2}
+  .nav-links,.nav-s{display:none}
+  .burger{display:flex}
+}
+@media(max-width:480px){
+  .foot-in{grid-template-columns:1fr}
+  .foot-in>div:first-child{grid-column:span 1}
+}
+</style>
+</head>
+<body>
+
+<!-- COOKIE -->
+<div id="ck">
+  <p>Usamos cookies propias y de terceros (Google AdSense/Analytics). Lee nuestra <a href="#" onclick="openM('priv')">Privacidad</a> y <a href="#" onclick="openM('cook')">Cookies</a>.</p>
+  <div class="ck-btns">
+    <button class="ck-ok" onclick="okCk()">Aceptar</button>
+    <button class="ck-no" onclick="noCk()">Solo necesarias</button>
+  </div>
+</div>
+
+<!-- MODALES -->
+<div class="mbg" id="m-priv">
+  <div class="mbox">
+    <div class="mhead"><h2>Política de Privacidad</h2><button class="mclose" onclick="closeM('priv')">✕</button></div>
+    <p><strong>Responsable:</strong> Wilfredo Rafael Romero Perez — Provinet Empresa Emprendimiento<br><strong>Correo:</strong> provinetempresaemprendimiendo@gmail.com</p>
+    <p>Este sitio es un portal educativo independiente. No solicitamos datos personales. Usamos cookies analíticas y publicitarias de Google.</p>
+    <p><strong>Publicidad:</strong> Google AdSense puede personalizar anuncios. Desactívalo en <a href="https://www.google.com/settings/ads" target="_blank">google.com/settings/ads</a>.</p>
+    <p>Última actualización: Junio 2025.</p>
+  </div>
+</div>
+<div class="mbg" id="m-cook">
+  <div class="mbox">
+    <div class="mhead"><h2>Política de Cookies</h2><button class="mclose" onclick="closeM('cook')">✕</button></div>
+    <ul>
+      <li><strong>Técnicas:</strong> funcionamiento básico del sitio.</li>
+      <li><strong>Analíticas:</strong> Google Analytics, tráfico anónimo.</li>
+      <li><strong>Publicitarias:</strong> Google AdSense para anuncios relevantes.</li>
+    </ul>
+    <p>Más info: <a href="https://policies.google.com/technologies/ads" target="_blank">Política de Google</a>.</p>
+  </div>
+</div>
+<div class="mbg" id="m-legal">
+  <div class="mbox">
+    <div class="mhead"><h2>Aviso Legal</h2><button class="mclose" onclick="closeM('legal')">✕</button></div>
+    <p><strong>Titular:</strong> Wilfredo Rafael Romero Perez · <strong>Proyecto:</strong> Provinet Empresa Emprendimiento · <strong>País:</strong> Venezuela</p>
+    <p>El contenido publicado tiene fines exclusivamente informativos y educativos. No constituye asesoramiento financiero, legal ni empresarial. Consulta con un profesional antes de tomar decisiones importantes para tu negocio.</p>
+    <p><strong>Política editorial:</strong> Artículos elaborados con base en información pública verificable. No publicamos contenido patrocinado sin indicarlo expresamente.</p>
+  </div>
+</div>
+<div class="mbg" id="m-sobre">
+  <div class="mbox">
+    <div class="mhead"><h2>Sobre Nosotros</h2><button class="mclose" onclick="closeM('sobre')">✕</button></div>
+    <p><strong>Provinet Empresa Emprendimiento</strong> es un portal educativo independiente creado por <strong>Wilfredo Rafael Romero Perez</strong> con una misión clara: ayudar a los venezolanos que quieren arrancar su propio negocio desde cero.</p>
+    <p>Sabemos que emprender en Venezuela tiene sus retos particulares. Por eso publicamos guías prácticas y honestas sobre ideas de negocio, finanzas básicas para emprendedores, cómo conseguir clientes, cómo poner precios y cómo hacer crecer un negocio pequeño paso a paso.</p>
+    <p>No somos una agencia de negocios ni consultora. Somos un equipo editorial comprometido con la educación emprendedora accesible para todos.</p>
+    <p>📧 provinetempresaemprendimiendo@gmail.com</p>
+  </div>
+</div>
+<div class="mbg" id="m-contacto">
+  <div class="mbox">
+    <div class="mhead"><h2>Contacto</h2><button class="mclose" onclick="closeM('contacto')">✕</button></div>
+    <p>¿Tienes una pregunta, sugerencia o quieres proponer un tema? Escríbenos.</p>
+    <p>📧 <strong><a href="mailto:provinetempresaemprendimiendo@gmail.com">provinetempresaemprendimiendo@gmail.com</a></strong></p>
+    <p>Respondemos en 24 a 48 horas hábiles. No ofrecemos consultoría empresarial personalizada.</p>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="#" onclick="goHome()">
+      <div class="logo-mark">🚀</div>
+      <div class="logo-txt">Provinet Empresa Emprendimiento<small>Arranca tu negocio desde cero</small></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" onclick="goHome()">Inicio</a></li>
+      <li><a href="#" onclick="fcat('ideas')">Ideas</a></li>
+      <li><a href="#" onclick="fcat('finanzas')">Finanzas</a></li>
+      <li><a href="#" onclick="fcat('clientes')">Clientes</a></li>
+      <li><a href="#" onclick="fcat('precios')">Precios</a></li>
+      <li><a href="#" onclick="fcat('legal')">Legal</a></li>
+      <li><a href="#" onclick="fcat('crecimiento')">Crecimiento</a></li>
+      <li><a href="#" onclick="openM('sobre')">Nosotros</a></li>
+    </ul>
+    <div class="nav-s">
+      <span style="color:var(--muted);font-size:0.9rem">⌕</span>
+      <input type="search" placeholder="Buscar guías..." oninput="doSearch(this.value)">
+    </div>
+    <button class="burger" onclick="togNav()" aria-label="Menú"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- AVISO -->
+<div class="aviso">
+  📋 <strong>Aviso:</strong> Provinet Empresa Emprendimiento es un portal educativo independiente. No somos una agencia de negocios ni consultora empresarial. Todo el contenido es exclusivamente informativo y educativo.
+</div>
+
+<!-- MAIN -->
+<div id="main">
+  <section class="hero">
+    <div class="hero-circle"></div>
+    <div class="hero-in">
+      <div>
+        <div class="hero-badge">🚀 Educación para emprendedores venezolanos</div>
+        <h1>Tu negocio empieza<br>con <em>una buena idea</em><br>y el conocimiento correcto.</h1>
+        <p class="hero-sub">Guías prácticas sobre cómo arrancar un negocio desde cero en Venezuela. Aprende sobre ideas, finanzas, clientes, precios y crecimiento sin rodeos.</p>
+        <a class="hero-cta" href="#articulos">Ver todas las guías ↓</a>
+      </div>
+      <div class="hero-right" id="hero-steps"></div>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="stats-in">
+      <div class="stat"><div class="n">10</div><div class="l">Guías completas</div></div>
+      <div class="stat"><div class="n">6</div><div class="l">Categorías</div></div>
+      <div class="stat"><div class="n">100%</div><div class="l">Gratuito</div></div>
+      <div class="stat"><div class="n">Venezuela</div><div class="l">Contexto local</div></div>
+    </div>
+  </div>
+
+  <section class="cats">
+    <div class="cats-in">
+      <div class="s-eye">Explora por tema</div>
+      <div class="s-ttl">¿En qué etapa está tu negocio?</div>
+      <div class="cat-grid">
+        <div class="cat-card" onclick="fcat('ideas')"><span class="ic">💡</span><h3>Ideas de Negocio</h3><p>Cómo validar antes de arrancar</p></div>
+        <div class="cat-card" onclick="fcat('finanzas')"><span class="ic">💰</span><h3>Finanzas</h3><p>Dinero, costos y ganancias</p></div>
+        <div class="cat-card" onclick="fcat('clientes')"><span class="ic">🤝</span><h3>Clientes</h3><p>Cómo conseguir y retenerlos</p></div>
+        <div class="cat-card" onclick="fcat('precios')"><span class="ic">🏷️</span><h3>Precios</h3><p>Cómo cobrar correctamente</p></div>
+        <div class="cat-card" onclick="fcat('legal')"><span class="ic">📋</span><h3>Legal y Formal</h3><p>Registros y obligaciones básicas</p></div>
+        <div class="cat-card" onclick="fcat('crecimiento')"><span class="ic">📈</span><h3>Crecimiento</h3><p>Escalar tu negocio paso a paso</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="arts" id="articulos">
+    <div class="arts-in">
+      <div class="s-eye">Guías y artículos</div>
+      <div class="s-ttl" style="margin-bottom:18px">Todo para arrancar y crecer</div>
+      <div class="frow" id="frow"></div>
+      <div class="art-grid" id="grid"></div>
+    </div>
+  </section>
+</div>
+
+<!-- READER -->
+<div id="reader">
+  <div class="rdr-nav">
+    <button class="back" onclick="closeReader()">← Volver</button>
+    <span id="rcrumb" style="font-size:0.77rem;color:rgba(255,255,255,0.7)"></span>
+  </div>
+  <div class="rdr-wrap" id="rcontent"></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-in">
+    <div>
+      <span class="foot-brand">Provinet Empresa Emprendimiento</span>
+      <p class="foot-desc">Educación emprendedora práctica para venezolanos que quieren arrancar su propio negocio desde cero. Guías gratuitas, claras y sin rodeos.</p>
+    </div>
+    <div class="foot-col">
+      <h5>Guías</h5>
+      <ul>
+        <li><a href="#" onclick="fcat('ideas')">Ideas de Negocio</a></li>
+        <li><a href="#" onclick="fcat('finanzas')">Finanzas</a></li>
+        <li><a href="#" onclick="fcat('clientes')">Clientes</a></li>
+        <li><a href="#" onclick="fcat('precios')">Precios</a></li>
+        <li><a href="#" onclick="fcat('legal')">Legal y Formal</a></li>
+        <li><a href="#" onclick="fcat('crecimiento')">Crecimiento</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="#" onclick="openM('sobre')">Sobre Nosotros</a></li>
+        <li><a href="#" onclick="openM('contacto')">Contacto</a></li>
+        <li><a href="#" onclick="openM('priv')">Política de Privacidad</a></li>
+        <li><a href="#" onclick="openM('cook')">Política de Cookies</a></li>
+        <li><a href="#" onclick="openM('legal')">Aviso Legal</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span>© 2025 Provinet Empresa Emprendimiento. Todos los derechos reservados.</span>
+    <span>Contenido educativo — no es asesoramiento empresarial.</span>
+  </div>
+</footer>
+
+<script>
+const ARTS = [
+  {id:1,cat:'ideas',label:'Ideas de Negocio',cls:'tg-a',icon:'💡',bg:'#EFF6FF',
+   title:'Cómo validar una idea de negocio antes de invertir un solo bolívar',
+   summary:'La mayoría de los negocios que fracasan no fallaron por falta de esfuerzo sino por falta de validación. Aprende a confirmar que tu idea tiene mercado antes de arriesgar dinero.',
+   rel:[2,3,4],
+   body:`<span class="rdr-tag tg-a">Ideas de Negocio</span>
+<h1>Cómo validar una idea de negocio antes de invertir un solo bolívar</h1>
+<p class="r-meta">Por Wilfredo Rafael Romero Perez · Provinet Empresa Emprendimiento · 9 min</p>
+<div class="rb">
+<p>Tienes una idea de negocio que te emociona. Antes de gastar un céntimo en local, inventario, equipos o publicidad, debes responder una pregunta fundamental: ¿hay personas dispuestas a pagar por esto? Validar la idea antes de invertir es la diferencia entre un negocio que arranca con base sólida y uno que cierra antes de los seis meses.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+<h2>¿Qué significa validar una idea de negocio?</h2>
+<p>Validar significa confirmar, con evidencia real, que existe un mercado dispuesto a pagar por tu producto o servicio. No es preguntarle a tu familia si les parece buena idea (siempre dirán que sí). Es conseguir clientes reales, aunque sea en pequeña escala, antes de hacer la inversión completa.</p>
+<h2>Paso 1: Define el problema que resuelves</h2>
+<p>Todo negocio exitoso resuelve un problema real para un grupo específico de personas. Antes de pensar en tu producto, define con claridad: ¿qué problema resuelve? ¿Para quién exactamente? ¿Con qué frecuencia tienen ese problema? ¿Cuánto les cuesta ese problema hoy (en dinero, tiempo o frustración)?</p>
+<h2>Paso 2: Investiga si ya existe competencia</h2>
+<p>La competencia existente es una señal positiva, no negativa. Significa que ya hay mercado para esa solución. Busca quién más está resolviendo ese problema en tu zona o en tu mercado objetivo. Estudia qué hacen bien y qué hacen mal. Tu oportunidad puede estar en hacer mejor lo que ellos hacen mal.</p>
+<div class="tip"><p>💡 <strong>Si no encuentras ninguna competencia, ten cuidado:</strong> puede significar que eres el primero en ver la oportunidad, pero más frecuentemente significa que otros ya lo intentaron y no funcionó, o que el mercado es más pequeño de lo que crees.</p></div>
+<h2>Paso 3: Habla con clientes potenciales reales</h2>
+<p>Identifica entre 10 y 20 personas que representen a tu cliente ideal. Habla con ellas, ya sea en persona, por teléfono o por mensajes. No les preguntes si comprarían tu producto (casi siempre dirán que sí para ser amables). Pregúntales sobre el problema: ¿cómo lo resuelven hoy? ¿Cuánto pagan por esa solución? ¿Qué les frustra de las opciones actuales?</p>
+<h2>Paso 4: Ofrece una versión mínima y cobra</h2>
+<p>La validación definitiva es que alguien te pague dinero real. Antes de tener el producto perfecto, ofrece una versión básica o mínima de tu solución a un precio real. Si consigues tus primeros tres a cinco clientes pagando, la idea está validada. Si nadie paga aunque digan que les interesa, necesitas ajustar algo.</p>
+<h2>Conclusión</h2>
+<p>Validar antes de invertir no es falta de confianza en tu idea: es inteligencia empresarial. Los emprendedores que más éxito tienen son los que aprenden rápido y barato antes de hacer apuestas grandes. La validación es ese aprendizaje barato que puede salvarte de una inversión costosa en algo que el mercado no quiere.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+</div>`},
+
+  {id:2,cat:'finanzas',label:'Finanzas',cls:'tg-b',icon:'💰',bg:'#F7FEE7',
+   title:'Finanzas básicas para emprendedores que arrancan desde cero',
+   summary:'Muchos negocios con buenas ideas fracasan por no entender sus números. Esta guía te explica los conceptos financieros esenciales para cualquier emprendedor.',
+   rel:[1,4,5],
+   body:`<span class="rdr-tag tg-b">Finanzas</span>
+<h1>Finanzas básicas para emprendedores que arrancan desde cero</h1>
+<p class="r-meta">Por Wilfredo Rafael Romero Perez · Provinet Empresa Emprendimiento · 9 min</p>
+<div class="rb">
+<p>No necesitas ser contador para manejar las finanzas de tu negocio pequeño. Pero sí necesitas entender ciertos conceptos básicos que te permitan saber si tu negocio está ganando o perdiendo dinero, y tomar decisiones basadas en números reales. Este artículo te da ese fundamento.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+<h2>Ingresos vs ganancias: la confusión más cara</h2>
+<p>El ingreso es todo el dinero que entra al negocio por ventas. La ganancia es lo que queda después de restar todos los costos. Muchos emprendedores confunden estos dos conceptos y creen que están ganando bien porque venden mucho, sin darse cuenta de que sus costos consumen casi todo ese ingreso.</p>
+<h2>Costos fijos y costos variables</h2>
+<p>Los costos fijos son los que pagas todos los meses independientemente de cuánto vendas: alquiler, servicios, suscripciones. Los costos variables cambian según cuánto produces o vendes: materias primas, empaques, comisiones. Conocer esta diferencia te ayuda a calcular cuánto necesitas vender para no perder dinero.</p>
+<h2>El punto de equilibrio</h2>
+<p>El punto de equilibrio es el mínimo que debes vender cada mes para cubrir todos tus costos sin ganar ni perder. Para calcularlo: suma todos tus costos fijos mensuales y divídelos entre el margen de ganancia por unidad vendida. Ese número es tu meta mínima de ventas cada mes.</p>
+<div class="tip"><p>💡 <strong>Ejemplo:</strong> Si tus costos fijos son 200 dólares al mes y cada producto que vendes te deja 10 dólares de margen, necesitas vender al menos 20 unidades al mes para no perder dinero. Todo lo que vendas por encima de 20 es ganancia.</p></div>
+<h2>Separar el dinero personal del dinero del negocio</h2>
+<p>Uno de los errores más comunes y más dañinos en los negocios pequeños es mezclar el dinero personal con el del negocio. Abre una cuenta bancaria separada para el negocio desde el primer día, aunque sea pequeño. Sin esa separación, es imposible saber cuánto está ganando realmente el negocio.</p>
+<h2>El flujo de caja: el pulso de tu negocio</h2>
+<p>El flujo de caja es el registro de todo el dinero que entra y sale del negocio. Un negocio puede ser rentable en papel y quedarse sin dinero en efectivo si cobra tarde y paga temprano. Registra cada entrada y salida, revísalo semanalmente y actúa antes de que los problemas de liquidez se conviertan en crisis.</p>
+<h2>Conclusión</h2>
+<p>Entender los números básicos de tu negocio no requiere estudios de contabilidad. Requiere disciplina para registrar cada movimiento, separar las finanzas personales de las del negocio y revisar los números regularmente. Esos hábitos simples son los que separan los negocios que sobreviven de los que cierran.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+</div>`},
+
+  {id:3,cat:'clientes',label:'Clientes',cls:'tg-c',icon:'🤝',bg:'#FEF9C3',
+   title:'Cómo conseguir tus primeros clientes cuando empiezas desde cero',
+   summary:'Sin clientes no hay negocio. Esta guía te explica estrategias concretas y económicas para conseguir tus primeros clientes reales en Venezuela.',
+   rel:[1,6,4],
+   body:`<span class="rdr-tag tg-c">Clientes</span>
+<h1>Cómo conseguir tus primeros clientes cuando empiezas desde cero</h1>
+<p class="r-meta">Por Wilfredo Rafael Romero Perez · Provinet Empresa Emprendimiento · 8 min</p>
+<div class="rb">
+<p>El momento más difícil de cualquier negocio nuevo es conseguir los primeros clientes. Sin historial, sin reseñas, sin reputación establecida. Este artículo te muestra estrategias concretas y económicas para romper ese círculo y conseguir tus primeros clientes reales.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+<h2>Tu red personal: el punto de partida más subestimado</h2>
+<p>Tus primeros clientes probablemente vendrán de personas que ya te conocen: familia, amigos, excompañeros de trabajo o estudio, vecinos. No tengas vergüenza de contarles lo que estás haciendo. Un mensaje directo y honesto explicando tu producto o servicio y pidiéndoles que lo compartan si conocen a alguien interesado puede generar tus primeras ventas sin gastar nada en publicidad.</p>
+<h2>Las redes sociales como vitrina gratuita</h2>
+<p>Instagram, WhatsApp y Facebook son herramientas gratuitas que permiten mostrar tu producto o servicio a miles de personas sin inversión inicial. Lo que importa no es la cantidad de seguidores sino la calidad del contenido: fotos claras, descripción honesta del producto, precio visible y forma de contacto directa. La consistencia en publicar regularmente construye audiencia con el tiempo.</p>
+<div class="tip"><p>💡 <strong>El poder del estado de WhatsApp:</strong> Publicar en el estado de WhatsApp todos los días lo que ofreces, con foto de calidad y precio, es una de las estrategias más efectivas para negocios pequeños en Venezuela. Tu lista de contactos ya te conoce y confía en ti.</p></div>
+<h2>Ofrece una experiencia excepcional al primer cliente</h2>
+<p>El primer cliente es el más importante porque puede convertirse en tu mejor vendedor. Cuando alguien compra por primera vez, haz todo lo posible para que la experiencia supere sus expectativas: entrega a tiempo, producto en perfectas condiciones, atención personalizada, un pequeño detalle adicional. Un cliente satisfecho cuenta su experiencia; un cliente encantado la comparte activamente.</p>
+<h2>Pide reseñas y recomendaciones activamente</h2>
+<p>Después de una venta exitosa, pide al cliente que te deje una reseña en tus redes sociales o que te recomiende a alguien que pueda necesitar tu producto. La mayoría de los clientes satisfechos lo harán si se lo pides directamente y en el momento correcto (justo después de recibir el producto o servicio, cuando están más contentos).</p>
+<h2>Conclusión</h2>
+<p>Conseguir los primeros clientes requiere más esfuerzo personal que dinero. Tu red, tus redes sociales y la calidad de tu servicio son las herramientas más poderosas al inicio. Cada cliente satisfecho es una semilla para el siguiente.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+</div>`},
+
+  {id:4,cat:'precios',label:'Precios',cls:'tg-d',icon:'🏷️',bg:'#FDF4FF',
+   title:'Cómo poner el precio correcto a tu producto o servicio',
+   summary:'Muchos emprendedores ponen precios por intuición o copiando a la competencia y terminan trabajando gratis. Aprende a calcular el precio que cubre tus costos y genera ganancia.',
+   rel:[2,1,6],
+   body:`<span class="rdr-tag tg-d">Precios</span>
+<h1>Cómo poner el precio correcto a tu producto o servicio</h1>
+<p class="r-meta">Por Wilfredo Rafael Romero Perez · Provinet Empresa Emprendimiento · 8 min</p>
+<div class="rb">
+<p>El precio es la decisión financiera más importante de cualquier negocio. Ponerlo demasiado bajo significa trabajar por nada. Ponerlo demasiado alto aleja clientes. Copiarlo de la competencia sin entender tus propios costos puede arruinarte sin que te des cuenta. Este artículo te enseña a calcularlo desde tus números reales.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+<h2>El error más común: olvidar tu propio tiempo</h2>
+<p>Muchos emprendedores calculan el precio sumando solo materiales e insumos. Olvidan incluir el costo de su propio tiempo, los gastos fijos del negocio y el margen de ganancia. El resultado es un precio que cubre los materiales pero que los deja trabajando gratis o incluso perdiendo dinero.</p>
+<h2>Los tres componentes de un precio correcto</h2>
+<p><strong>Costo directo:</strong> todo lo que gastas directamente para producir o entregar ese producto o servicio. Materiales, ingredientes, insumos, empaques, envío.</p>
+<p><strong>Proporción de gastos fijos:</strong> el negocio tiene gastos que existen independientemente de cuánto vendes. Divide esos gastos fijos mensuales entre las unidades que produces o vendes al mes. Esa cifra es lo que cada unidad debe contribuir para cubrir los fijos.</p>
+<p><strong>Tu ganancia:</strong> después de cubrir costos directos y fijos, qué porcentaje quieres ganar. Para negocios pequeños, un margen del 20% al 40% sobre el costo total es razonable, aunque varía según el sector.</p>
+<div class="tip"><p>💡 <strong>Fórmula básica:</strong> Precio = (Costo directo + Proporción de fijos) × (1 + % de margen). Si tu costo directo es 30, tu proporción de fijos es 10 y quieres 30% de margen: Precio = 40 × 1.30 = 52.</p></div>
+<h2>Por qué vender barato puede arruinar tu negocio</h2>
+<p>Precio bajo no significa más clientes ni más éxito. Con márgenes pequeños, cualquier imprevisto te pone en números rojos. Además, el precio bajo puede comunicar baja calidad y alejar precisamente a los clientes que pagarían bien por un producto de calidad. El negocio sostenible se construye con precios que generan margen real.</p>
+<h2>Cómo subir precios sin perder clientes</h2>
+<p>Si tus precios actuales no te permiten ganar lo suficiente, súbelos gradualmente. Comunica el aumento con anticipación, explica el valor que ofreces y hazlo con confianza. Los clientes que se van por una subida de precio razonable son los que menos aportan a tu negocio a largo plazo.</p>
+<h2>Conclusión</h2>
+<p>El precio correcto no es el más bajo del mercado: es el que cubre todos tus costos reales y deja un margen que permite que el negocio crezca. Calcularlo bien desde el principio es uno de los fundamentos más importantes de un negocio financieramente saludable.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+</div>`},
+
+  {id:5,cat:'legal',label:'Legal y Formal',cls:'tg-e',icon:'📋',bg:'#FFF1F2',
+   title:'Cómo formalizar tu negocio en Venezuela: lo mínimo que necesitas saber',
+   summary:'Operar informal tiene sus riesgos. Aprende cuáles son los pasos básicos para formalizar tu negocio en Venezuela y qué ventajas te da hacerlo.',
+   rel:[2,4,6],
+   body:`<span class="rdr-tag tg-e">Legal y Formal</span>
+<h1>Cómo formalizar tu negocio en Venezuela: lo mínimo que necesitas saber</h1>
+<p class="r-meta">Por Wilfredo Rafael Romero Perez · Provinet Empresa Emprendimiento · 8 min</p>
+<div class="rb">
+<p>Muchos negocios en Venezuela operan en la informalidad, especialmente al inicio. Eso tiene sus razones prácticas, pero también sus riesgos y limitaciones. Este artículo te explica los pasos básicos para formalizar un negocio pequeño y qué ventajas concretas te da hacerlo.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+<h2>¿Por qué formalizar tu negocio?</h2>
+<p>La formalidad no es solo una obligación legal: tiene ventajas prácticas. Un negocio formal puede emitir facturas (lo que abre puertas con clientes corporativos), puede acceder a créditos bancarios, puede participar en licitaciones y contratos con empresas o instituciones, y tiene un respaldo legal en disputas comerciales.</p>
+<h2>El RIF: primer paso en Venezuela</h2>
+<p>El Registro de Información Fiscal (RIF) es el identificador fiscal ante el SENIAT. Para operar como persona natural con negocio propio, necesitas tu RIF personal activo. Si quieres constituir una empresa (compañía anónima o firma personal), necesitas un RIF jurídico adicional. El RIF es gratuito y se obtiene en el portal del SENIAT o en sus oficinas.</p>
+<h2>Firma personal vs compañía anónima</h2>
+<p>Para la mayoría de los negocios pequeños en Venezuela, operar como persona natural con RIF es suficiente al inicio. La firma personal es más sencilla de constituir y mantener. La compañía anónima (C.A.) ofrece más protección al separar legalmente el patrimonio personal del empresarial, pero implica más trámites y costos. Consulta con un abogado o contador si no estás seguro cuál conviene más a tu caso.</p>
+<div class="warn"><p>⚠️ Este artículo es informativo y educativo. Para decisiones legales específicas sobre tu negocio, consulta siempre con un abogado o contador certificado en Venezuela.</p></div>
+<h2>Obligaciones fiscales básicas del emprendedor</h2>
+<p>Una vez formalizado, tienes obligaciones fiscales: declarar el IVA si superas el umbral establecido, declarar el ISLR anualmente, y emitir facturas conformes a las normas del SENIAT. Un contador puede ayudarte a entender exactamente qué aplica a tu tipo y tamaño de negocio.</p>
+<h2>Conclusión</h2>
+<p>Formalizar no es el primer paso de todo negocio, pero sí es un paso que llega en algún momento si el negocio crece. Entender el proceso básico te prepara para cuando ese momento llegue y te ayuda a tomar decisiones informadas sobre la estructura legal de tu emprendimiento.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+</div>`},
+
+  {id:6,cat:'crecimiento',label:'Crecimiento',cls:'tg-f',icon:'📈',bg:'#F0FDF4',
+   title:'Cómo hacer crecer tu negocio pequeño paso a paso en Venezuela',
+   summary:'Arrancar un negocio es difícil. Hacerlo crecer de forma sostenible es otro nivel. Aprende las estrategias más efectivas para escalar sin descontrolarte.',
+   rel:[2,3,4],
+   body:`<span class="rdr-tag tg-f">Crecimiento</span>
+<h1>Cómo hacer crecer tu negocio pequeño paso a paso en Venezuela</h1>
+<p class="r-meta">Por Wilfredo Rafael Romero Perez · Provinet Empresa Emprendimiento · 9 min</p>
+<div class="rb">
+<p>Hay una etapa en todo negocio pequeño que se siente bien pero que también asusta: el momento en que las cosas empiezan a funcionar y surge la pregunta de cómo crecer sin que todo se descontrole. Este artículo te da las estrategias más efectivas para escalar un negocio pequeño de forma sostenible.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+<h2>Antes de crecer: consolida lo que tienes</h2>
+<p>El crecimiento prematuro es una de las causas más comunes de fracaso en negocios pequeños. Antes de buscar más clientes o más productos, asegúrate de que el negocio actual funciona bien: tus clientes están satisfechos, tus procesos son consistentes, tus finanzas están ordenadas y tienes margen real de ganancia. Crecer sobre una base frágil amplifica los problemas, no los resuelve.</p>
+<h2>Las tres palancas del crecimiento</h2>
+<p><strong>Más clientes:</strong> conseguir nuevas personas que compren lo que ya vendes. Es la forma de crecimiento más obvia pero no siempre la más eficiente.</p>
+<p><strong>Más frecuencia:</strong> lograr que los clientes que ya tienes compren más seguido. Es más barato retener un cliente que conseguir uno nuevo.</p>
+<p><strong>Mayor ticket promedio:</strong> lograr que cada compra valga más. Ofrecer productos complementarios, versiones premium o paquetes que aumenten el valor de cada transacción.</p>
+<div class="tip"><p>💡 La combinación de las tres palancas es más poderosa que enfocarse en una sola. Un 10% de mejora en cada una puede duplicar los ingresos del negocio.</p></div>
+<h2>Cuándo y cómo contratar tu primera ayuda</h2>
+<p>Llega un momento en que el negocio crece más de lo que puedes manejar solo. Antes de contratar, identifica exactamente qué tareas consumen más tu tiempo y cuáles son las que solo tú puedes hacer bien. Comienza contratando ayuda para las tareas operativas y repetitivas, no para las estratégicas. Un colaborador a tiempo parcial puede ser suficiente al inicio.</p>
+<h2>Reinvierte en el negocio antes de pagarte más</h2>
+<p>Cuando el negocio empiece a generar ganancia, la tentación es aumentar el sueldo propio inmediatamente. La estrategia más efectiva para el crecimiento es reinvertir una parte significativa de las ganancias en el negocio: mejor equipamiento, más inventario, marketing, formación. Defínete un sueldo justo y constante, y reinvierte el excedente.</p>
+<h2>Conclusión</h2>
+<p>El crecimiento sostenible de un negocio pequeño es un proceso gradual que requiere bases sólidas, estrategia clara y paciencia. Las tres palancas del crecimiento, combinadas con una gestión financiera ordenada y la reinversión inteligente de ganancias, son el camino más seguro para escalar sin perder el control de lo que construiste.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+</div>`},
+
+  {id:7,cat:'ideas',label:'Ideas de Negocio',cls:'tg-a',icon:'🔍',bg:'#EFF6FF',
+   title:'10 ideas de negocio para emprender en Venezuela con poco capital',
+   summary:'No necesitas mucho dinero para empezar un negocio. Estas 10 ideas tienen baja inversión inicial, demanda real en Venezuela y potencial de crecimiento.',
+   rel:[1,2,4],
+   body:`<span class="rdr-tag tg-a">Ideas de Negocio</span>
+<h1>10 ideas de negocio para emprender en Venezuela con poco capital</h1>
+<p class="r-meta">Por Wilfredo Rafael Romero Perez · Provinet Empresa Emprendimiento · 8 min</p>
+<div class="rb">
+<p>La falta de capital no tiene que ser un obstáculo para emprender. Existen negocios con inversión inicial baja, demanda real en el mercado venezolano y potencial de crecimiento. Esta lista te da 10 ideas concretas, cada una con sus ventajas y consideraciones básicas.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+<h2>1. Repostería y comida casera</h2>
+<p>La demanda de tortas, postres, empanadas y comida casera de calidad es constante en Venezuela. La inversión inicial puede ser mínima si ya tienes equipamiento básico de cocina. El canal de ventas más efectivo es WhatsApp e Instagram, con pedidos por encargo que minimizan el desperdicio.</p>
+<h2>2. Servicios de diseño gráfico digital</h2>
+<p>Si tienes habilidades de diseño, puedes ofrecer servicios a pequeños negocios que necesitan logos, publicaciones para redes sociales, menús o materiales de marketing. La inversión es casi cero: solo necesitas un computador y los programas adecuados.</p>
+<h2>3. Clases particulares y tutorías</h2>
+<p>Matemáticas, inglés, ciencias, música, idiomas. La demanda de clases de apoyo escolar es constante y el formato virtual amplía el mercado más allá de tu zona geográfica.</p>
+<h2>4. Mantenimiento y reparaciones del hogar</h2>
+<p>Plomería básica, electricidad, pintura, instalación de aires acondicionados. Los servicios de mantenimiento tienen alta demanda y relativamente poca oferta de calidad en muchas zonas de Venezuela.</p>
+<div class="tip"><p>💡 Antes de elegir una idea, evalúa cuál se alinea mejor con tus habilidades actuales, el mercado de tu zona y los recursos que tienes disponibles. La mejor idea de negocio es la que puedes ejecutar bien, no la que suena más atractiva en papel.</p></div>
+<h2>5. Venta de productos importados o de difícil acceso</h2>
+<p>La importación de productos que no se consiguen fácilmente en Venezuela o que tienen una diferencia de precio significativa puede ser un negocio rentable con capital inicial moderado.</p>
+<h2>6. Servicios de redes sociales para negocios</h2>
+<p>Muchos negocios pequeños necesitan presencia en redes pero no tienen el tiempo o conocimiento para manejarlas. Si tienes habilidades en marketing digital, puedes ofrecer este servicio de forma recurrente.</p>
+<h2>7. Costura y modificación de ropa</h2>
+<p>Los servicios de costura, ajuste y modificación de ropa tienen demanda constante y pueden hacerse desde casa con una inversión relativamente baja.</p>
+<h2>8. Transporte y delivery local</h2>
+<p>Si tienes vehículo propio, los servicios de transporte de personas o de delivery de paquetes y comida tienen alta demanda en las principales ciudades venezolanas.</p>
+<h2>9. Producción de contenido digital</h2>
+<p>Fotografía, video, edición. Los negocios necesitan contenido visual de calidad para sus redes sociales y cada vez más están dispuestos a pagar por ello.</p>
+<h2>10. Agricultura y productos naturales</h2>
+<p>La producción de hortalizas, frutas, huevos u otros productos naturales en pequeña escala tiene demanda creciente, especialmente en zonas urbanas y periurbanas.</p>
+<h2>Conclusión</h2>
+<p>Ninguna de estas ideas es una fórmula mágica. Todas requieren esfuerzo, consistencia y aprendizaje continuo. Pero todas tienen en común que pueden arrancar con poco capital y crecer gradualmente a medida que se consolida la demanda y la reputación.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+</div>`},
+
+  {id:8,cat:'clientes',label:'Clientes',cls:'tg-c',icon:'⭐',bg:'#FEF9C3',
+   title:'Cómo fidelizar clientes y hacer que vuelvan sin gastar en publicidad',
+   summary:'Un cliente que vuelve cuesta mucho menos que conseguir uno nuevo. Aprende estrategias simples para que tus clientes regresen y te recomienden.',
+   rel:[3,6,2],
+   body:`<span class="rdr-tag tg-c">Clientes</span>
+<h1>Cómo fidelizar clientes y hacer que vuelvan sin gastar en publicidad</h1>
+<p class="r-meta">Por Wilfredo Rafael Romero Perez · Provinet Empresa Emprendimiento · 7 min</p>
+<div class="rb">
+<p>Conseguir un cliente nuevo cuesta entre 5 y 7 veces más que retener uno existente. Ese dato solo debería cambiar completamente cómo los emprendedores piensan sobre sus clientes actuales. La fidelización no requiere grandes presupuestos: requiere atención y consistencia.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+<h2>Por qué los clientes dejan de comprar</h2>
+<p>La mayoría de los clientes que dejan de comprar no lo hacen por precio ni por mala calidad: lo hacen por indiferencia. Sintieron que al negocio no le importaba si compraban o no. Esa es una razón que puedes controlar completamente.</p>
+<h2>El seguimiento post-venta</h2>
+<p>Después de que un cliente recibe su compra, un mensaje preguntando si está satisfecho hace dos cosas: demuestra que te importa su experiencia y abre la puerta para detectar problemas antes de que el cliente se vaya en silencio. Pocos negocios lo hacen, lo que hace que los que lo hacen se destaquen inmediatamente.</p>
+<div class="tip"><p>💡 <strong>Esta semana:</strong> Envía un mensaje a tus últimos 10 clientes preguntándoles cómo les fue con su compra. Verás cuántos responden positivamente y cuántas oportunidades de venta adicional surgen de ese solo gesto.</p></div>
+<h2>Reconoce a los clientes frecuentes</h2>
+<p>Un descuento en la quinta compra, un pequeño regalo sorpresa, atención prioritaria. Ninguno de estos gestos requiere una gran inversión, pero todos comunican que valoras la relación más allá de la transacción individual. Los clientes que se sienten valorados vuelven y traen a otros.</p>
+<h2>El boca a boca bien gestionado</h2>
+<p>Un cliente satisfecho puede recomendar tu negocio. Un cliente que vivió una experiencia excepcional lo hará activamente. Para activar el boca a boca, primero entrega una experiencia que valga la pena compartir y luego facilita la recomendación: pídele directamente que te recomiende a alguien que pueda necesitar lo que ofreces.</p>
+<h2>Conclusión</h2>
+<p>La fidelización no es un programa complicado ni requiere grandes presupuestos. Es una actitud hacia tus clientes: tratarlos como relaciones de largo plazo, no como transacciones únicas. Los negocios pequeños que dominan esto tienen una ventaja enorme: pueden ofrecer atención personalizada que las empresas grandes no pueden replicar.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+</div>`},
+
+  {id:9,cat:'finanzas',label:'Finanzas',cls:'tg-b',icon:'📊',bg:'#F7FEE7',
+   title:'Cómo controlar los costos de tu negocio sin sacrificar la calidad',
+   summary:'Reducir costos no significa ofrecer menos. Significa encontrar formas más inteligentes de producir lo mismo con menos recursos innecesarios.',
+   rel:[2,4,6],
+   body:`<span class="rdr-tag tg-b">Finanzas</span>
+<h1>Cómo controlar los costos de tu negocio sin sacrificar la calidad</h1>
+<p class="r-meta">Por Wilfredo Rafael Romero Perez · Provinet Empresa Emprendimiento · 7 min</p>
+<div class="rb">
+<p>Controlar los costos es una de las palancas más poderosas para mejorar la rentabilidad de un negocio pequeño. Pero muchos emprendedores asocian reducción de costos con reducción de calidad, y eso no tiene por qué ser así. Este artículo te muestra cómo hacerlo de forma inteligente.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+<h2>Primero, conoce exactamente en qué gastas</h2>
+<p>Antes de reducir cualquier costo, necesitas saber exactamente en qué gastas. Haz un inventario completo de todos los gastos del negocio del último mes. Agrúpalos en categorías. Con esa visión completa, es mucho más fácil identificar dónde hay margen para optimizar.</p>
+<h2>Costos que puedes reducir sin impacto en la calidad</h2>
+<p><strong>Proveedores:</strong> ¿cuándo fue la última vez que cotizaste con otros proveedores o negociaste con los actuales? Los precios cambian y las relaciones establecidas pueden generar descuentos que nunca pediste.</p>
+<p><strong>Compras en mayor cantidad:</strong> comprar insumos frecuentes en mayor volumen suele reducir el costo unitario. Requiere más capital inicial pero mejora el margen a largo plazo.</p>
+<p><strong>Suscripciones y servicios:</strong> revisa todos los servicios digitales que pagas mensualmente. ¿Los usas todos activamente? ¿Hay alternativas gratuitas o más económicas?</p>
+<div class="warn"><p>⚠️ <strong>Costos que NO debes reducir:</strong> la calidad de los insumos que determinan tu producto final, el servicio al cliente y cualquier inversión que directamente genera ventas. Recortar aquí puede mejorar el margen a corto plazo pero destruye el negocio a largo plazo.</p></div>
+<h2>La automatización como reducción de costo</h2>
+<p>Muchas tareas repetitivas pueden automatizarse con herramientas gratuitas o de bajo costo: programación de publicaciones en redes sociales, mensajes automáticos de seguimiento a clientes, registros de ventas digitales. El tiempo que liberas puede dedicarse a actividades que generan más valor.</p>
+<h2>Conclusión</h2>
+<p>La gestión inteligente de costos es un proceso continuo. Revisar regularmente en qué gastas, negociar con proveedores, eliminar lo que no agrega valor y encontrar formas más eficientes de operar son hábitos que mejoran la salud financiera del negocio mes a mes.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+</div>`},
+
+  {id:10,cat:'crecimiento',label:'Crecimiento',cls:'tg-f',icon:'🌐',bg:'#F0FDF4',
+   title:'Cómo usar las redes sociales para hacer crecer tu negocio en Venezuela',
+   summary:'Las redes sociales son la herramienta de marketing más accesible para los negocios pequeños. Aprende a usarlas estratégicamente para vender más.',
+   rel:[3,6,1],
+   body:`<span class="rdr-tag tg-f">Crecimiento</span>
+<h1>Cómo usar las redes sociales para hacer crecer tu negocio en Venezuela</h1>
+<p class="r-meta">Por Wilfredo Rafael Romero Perez · Provinet Empresa Emprendimiento · 8 min</p>
+<div class="rb">
+<p>Para los negocios pequeños en Venezuela, las redes sociales son la herramienta de marketing más accesible y con mayor alcance disponible. Sin embargo, usarlas bien no es simplemente publicar fotos de tus productos. Requiere estrategia, consistencia y entender qué funciona en cada plataforma.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+<h2>WhatsApp Business: tu primera tienda digital</h2>
+<p>WhatsApp Business es gratuito y tiene funciones específicas para negocios: catálogo de productos, respuestas automáticas, etiquetas para organizar clientes y estados que funcionan como vitrina. En Venezuela, WhatsApp es la plataforma de comunicación más usada, lo que la convierte en el canal de ventas más directo disponible para cualquier negocio pequeño.</p>
+<h2>Instagram: muestra lo que haces</h2>
+<p>Instagram funciona especialmente bien para negocios con producto visual: comida, ropa, artesanías, decoración. Las claves son la consistencia (publicar regularmente), la calidad visual (fotos claras, bien iluminadas), y la claridad en la información (precio, disponibilidad y forma de contacto siempre visibles).</p>
+<div class="tip"><p>💡 <strong>El contenido que más vende en redes:</strong> no es el que muestra el producto terminado sino el que muestra el proceso. Un video de cómo preparas tu producto genera más confianza y conexión que una foto del producto solo.</p></div>
+<h2>Facebook: comunidades y ventas locales</h2>
+<p>Los grupos de compraventa de Facebook por ciudad o zona son una fuente de clientes potenciales muy efectiva para negocios locales. Participar activamente en estos grupos, con publicaciones honestas y respuesta rápida a las consultas, puede generar ventas sin ninguna inversión en publicidad pagada.</p>
+<h2>La consistencia por encima de la perfección</h2>
+<p>El error más común en redes sociales para negocios es publicar mucho durante una semana y luego desaparecer por un mes. La consistencia importa más que la perfección. Una publicación de calidad media todos los días es más efectiva que una publicación perfecta cada dos semanas. El algoritmo y la audiencia premian la consistencia.</p>
+<h2>Conclusión</h2>
+<p>Las redes sociales son una herramienta poderosa y gratuita para hacer crecer un negocio pequeño en Venezuela. La clave está en elegir las plataformas donde está tu cliente, publicar con consistencia, mostrar el valor real de lo que ofreces y responder rápido a cada consulta. Eso, mantenido en el tiempo, construye una audiencia y una base de clientes que crece sola.</p>
+<div class="adslot"><!-- HUECO ANUNCIO ADSENSE (insertar más tarde) --></div>
+</div>`}
+];
+
+const CATS = ['all','ideas','finanzas','clientes','precios','legal','crecimiento'];
+const LABELS = {all:'Todos',ideas:'Ideas',finanzas:'Finanzas',clientes:'Clientes',precios:'Precios',legal:'Legal',crecimiento:'Crecimiento'};
+
+const stepsData = [
+  {n:'01',t:'Valida tu idea',s:'Antes de invertir un peso',cat:'ideas'},
+  {n:'02',t:'Entiende tus finanzas',s:'Costos, precios y ganancias',cat:'finanzas'},
+  {n:'03',t:'Consigue clientes',s:'Estrategias sin mucho presupuesto',cat:'clientes'},
+  {n:'04',t:'Cobra correctamente',s:'Precios que cubren y generan margen',cat:'precios'},
+  {n:'05',t:'Haz crecer el negocio',s:'Escala de forma sostenible',cat:'crecimiento'},
+];
+const hs = document.getElementById('hero-steps');
+stepsData.forEach(d => {
+  const el = document.createElement('div');
+  el.className = 'step-box';
+  el.onclick = () => fcat(d.cat);
+  el.innerHTML = '<div class="step-n">'+d.n+'</div><div class="step-txt"><strong>'+d.t+'</strong><span>'+d.s+'</span></div>';
+  hs.appendChild(el);
+});
+
+const fr = document.getElementById('frow');
+CATS.forEach(c => {
+  const b = document.createElement('button');
+  b.className = 'fb'+(c==='all'?' on':'');
+  b.textContent = LABELS[c];
+  b.onclick = () => fcat(c);
+  fr.appendChild(b);
+});
+
+function renderGrid(list) {
+  document.getElementById('grid').innerHTML = list.map(a => `
+    <div class="art-card" onclick="openReader(${a.id})">
+      <div class="art-thumb" style="background:${a.bg}">${a.icon}</div>
+      <div class="art-body">
+        <span class="art-tag ${a.cls}">${a.label}</span>
+        <h3>${a.title}</h3>
+        <p>${a.summary}</p>
+        <span class="art-read">Leer guía →</span>
+      </div>
+    </div>`).join('');
+}
+renderGrid(ARTS);
+
+function fcat(cat) {
+  document.querySelectorAll('.fb').forEach((b,i) => b.classList.toggle('on', CATS[i]===cat));
+  renderGrid(cat==='all' ? ARTS : ARTS.filter(a=>a.cat===cat));
+  document.getElementById('articulos')?.scrollIntoView({behavior:'smooth'});
+}
+
+function doSearch(q) {
+  if(!q.trim()){renderGrid(ARTS);return}
+  const lq=q.toLowerCase();
+  renderGrid(ARTS.filter(a=>a.title.toLowerCase().includes(lq)||a.summary.toLowerCase().includes(lq)||a.label.toLowerCase().includes(lq)));
+}
+
+function openReader(id) {
+  const a = ARTS.find(x=>x.id===id);
+  if(!a) return;
+  document.getElementById('rcrumb').textContent = a.label;
+  const rel = a.rel.map(rid=>ARTS.find(x=>x.id===rid)).filter(Boolean)
+    .map(r=>`<a class="rel-lnk" href="#" onclick="openReader(${r.id});return false;">→ ${r.title}</a>`).join('');
+  document.getElementById('rcontent').innerHTML = a.body+`<div class="rel-blk"><h4>También te puede interesar</h4><div class="rel-links">${rel}</div></div>`;
+  const rd = document.getElementById('reader');
+  rd.style.display='block'; rd.scrollTop=0;
+  document.body.style.overflow='hidden';
+}
+
+function closeReader(){document.getElementById('reader').style.display='none';document.body.style.overflow='';}
+function goHome(){closeReader();window.scrollTo({top:0,behavior:'smooth'});}
+function openM(n){document.getElementById('m-'+n).classList.add('open')}
+function closeM(n){document.getElementById('m-'+n).classList.remove('open')}
+document.querySelectorAll('.mbg').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open')}));
+function okCk(){localStorage.setItem('ck','y');document.getElementById('ck').style.display='none'}
+function noCk(){localStorage.setItem('ck','n');document.getElementById('ck').style.display='none'}
+if(localStorage.getItem('ck'))document.getElementById('ck').style.display='none';
+function togNav(){
+  const m=document.querySelector('.nav-links');
+  const show=m.style.display==='flex';
+  m.style.cssText=show?'':'display:flex;flex-direction:column;position:absolute;top:62px;left:0;right:0;background:white;padding:16px 24px;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,0.08);border-bottom:1px solid var(--line)';
+}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){closeReader();document.querySelectorAll('.mbg').forEach(m=>m.classList.remove('open'))}
+});
+</script>
+</body>
+</html>
